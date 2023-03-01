@@ -107,6 +107,9 @@ public class GlobalSearchBar extends HBox {
     private final BooleanProperty globalSearchActive = new SimpleBooleanProperty(false);
     private GlobalSearchResultDialog globalSearchResultDialog;
 
+    private final Button openSearchHistoryButton;
+    private final BooleanProperty searchHistoryActive = new SimpleBooleanProperty(false);
+
     public GlobalSearchBar(JabRefFrame frame, StateManager stateManager, PreferencesService preferencesService, CountingUndoManager undoManager, DialogService dialogService) {
         super();
         this.stateManager = stateManager;
@@ -145,6 +148,7 @@ public class GlobalSearchBar extends HBox {
         fulltextButton = IconTheme.JabRefIcons.FULLTEXT.asToggleButton();
         openGlobalSearchButton = IconTheme.JabRefIcons.OPEN_GLOBAL_SEARCH.asButton();
         keepSearchString = IconTheme.JabRefIcons.KEEP_SEARCH_STRING.asToggleButton();
+        openSearchHistoryButton = IconTheme.JabRefIcons.SEARCH_HISTORY.asButton();
 
         initSearchModifierButtons();
 
@@ -180,7 +184,7 @@ public class GlobalSearchBar extends HBox {
         visualizer.setDecoration(new IconValidationDecorator(Pos.CENTER_LEFT));
         Platform.runLater(() -> visualizer.initVisualization(regexValidator.getValidationStatus(), searchField));
 
-        this.getChildren().addAll(searchField, openGlobalSearchButton, currentResults);
+        this.getChildren().addAll(searchField, openGlobalSearchButton, openSearchHistoryButton, currentResults);
         this.setSpacing(4.0);
         this.setAlignment(Pos.CENTER_LEFT);
 
@@ -245,6 +249,15 @@ public class GlobalSearchBar extends HBox {
             performSearch();
             dialogService.showCustomDialogAndWait(globalSearchResultDialog);
             globalSearchActive.setValue(false);
+        });
+
+        openSearchHistoryButton.disableProperty().bindBidirectional(searchHistoryActive);
+        openSearchHistoryButton.setTooltip(new Tooltip(Localization.lang("See, modify and reuse your search history")));
+        initSearchModifierButton(openSearchHistoryButton);
+        openSearchHistoryButton.setOnAction(evt -> {
+            searchHistoryActive.setValue(true);
+            // Open the window here
+            searchHistoryActive.setValue(false);
         });
     }
 
