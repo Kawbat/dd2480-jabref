@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<DialogPane prefWidth="530.0" prefHeight="510.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jabref.gui.search.HistoryDialogView">
+    <content>
+        <VBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+
+            <TextArea fx:id="textAreaVersions" editable="false" prefHeight="600.0" prefWidth="200.0" styleClass="info-sections"/>
+        </VBox>
+    </content>
+    <header>
+    </header>
+    <ButtonType fx:id="copyHistoryButton" text="%Copy Search History" buttonData="LEFT"/>
+    <ButtonType fx:constant="CLOSE"/>
+</DialogPane>
