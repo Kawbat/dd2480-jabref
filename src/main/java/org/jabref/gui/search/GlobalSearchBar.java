@@ -260,7 +260,7 @@ public class GlobalSearchBar extends HBox {
             searchHistoryActive.setValue(true);
             historyDialogView = new HistoryDialogView();
             DialogService dialogService = Injector.instantiateModelOrService(DialogService.class);
-            dialogService.showCustomDialog(historyDialogView);
+            dialogService.showCustomDialogAndWait(historyDialogView);
             searchHistoryActive.setValue(false);
         });
     }
