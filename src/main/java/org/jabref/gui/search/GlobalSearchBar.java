@@ -9,6 +9,7 @@ import java.util.regex.PatternSyntaxException;
 
 import javax.swing.undo.UndoManager;
 
+import com.airhacks.afterburner.injection.Injector;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.BooleanBinding;
@@ -106,6 +107,7 @@ public class GlobalSearchBar extends HBox {
 
     private final BooleanProperty globalSearchActive = new SimpleBooleanProperty(false);
     private GlobalSearchResultDialog globalSearchResultDialog;
+    private HistoryDialogView historyDialogView;
 
     private final Button openSearchHistoryButton;
     private final BooleanProperty searchHistoryActive = new SimpleBooleanProperty(false);
@@ -256,7 +258,9 @@ public class GlobalSearchBar extends HBox {
         initSearchModifierButton(openSearchHistoryButton);
         openSearchHistoryButton.setOnAction(evt -> {
             searchHistoryActive.setValue(true);
-            // Open the window here
+            historyDialogView = new HistoryDialogView();
+            DialogService dialogService = Injector.instantiateModelOrService(DialogService.class);
+            dialogService.showCustomDialog(historyDialogView);
             searchHistoryActive.setValue(false);
         });
     }
