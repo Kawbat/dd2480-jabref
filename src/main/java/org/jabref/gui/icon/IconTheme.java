@@ -191,6 +191,7 @@ public class IconTheme {
         REFRESH(MaterialDesignR.REFRESH),
         DELETE_ENTRY(MaterialDesignD.DELETE),
         SEARCH(MaterialDesignM.MAGNIFY),
+        SEARCH_HISTORY(MaterialDesignH.HISTORY),
         FILE_SEARCH(MaterialDesignF.FILE_FIND),
         PDF_METADATA_READ(MaterialDesignF.FORMAT_ALIGN_TOP),
         PDF_METADATA_WRITE(MaterialDesignF.FORMAT_ALIGN_BOTTOM),
