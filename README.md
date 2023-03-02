@@ -62,15 +62,15 @@ you took care of and where you spent your time, if that time exceeds
 
 [TODO]
 
-## Overview of issue(s) and work done.
+## Overview
 
-Title:
+### Issue #7906: Record search history
 
-URL:
+Implement recording of search history so that the user can view previous search queries in order to refine or repeat new searches and also allow the user to remove one or multiple entries in the search history.
 
-Summary in one or two sentences
+<https://github.com/JabRef/jabref/issues/7906>
 
-Scope (functionality and code affected).
+The search history management should be implemented in a separate class called `SearchHistory` where the list itself is handled by a `LinkedHashSet` data structure. This automatically avoids duplicate entries and also keeps the order that entries are saved in. When the user performs a search this query should also be forwarded from `GlobalSearchBar` to the `SearchHistory` class which validates it and then stores it in the data structure. Further `GlobalSearchBar` also needs to be modified in order to append the history button to the side of the search bar.
 
 ## Requirements for the new feature or requirements affected by functionality being refactored
 
