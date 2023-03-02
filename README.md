@@ -2,13 +2,11 @@
 
 ## Project
 
-Name:
+JabRef
 
-URL:
+<https://github.com/JabRef/jabref>
 
-One or two sentences describing it
-
-[TODO]
+JabRef is a citation and reference management tool which allows the user to collect and organize various research papers. It has a graphical user interface and is implemented in Java.
 
 ## Onboarding experience
 
