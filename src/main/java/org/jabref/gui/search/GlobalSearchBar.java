@@ -9,7 +9,6 @@ import java.util.regex.PatternSyntaxException;
 
 import javax.swing.undo.UndoManager;
 
-import com.airhacks.afterburner.injection.Injector;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.BooleanBinding;
@@ -65,6 +64,7 @@ import org.jabref.model.search.rules.SearchRules;
 import org.jabref.preferences.PreferencesService;
 import org.jabref.preferences.SearchPreferences;
 
+import com.airhacks.afterburner.injection.Injector;
 import de.saxsys.mvvmfx.utils.validation.FunctionBasedValidator;
 import de.saxsys.mvvmfx.utils.validation.ValidationMessage;
 import de.saxsys.mvvmfx.utils.validation.Validator;
@@ -315,7 +315,8 @@ public class GlobalSearchBar extends HBox {
     private boolean validRegex() {
         try {
             Pattern.compile(searchField.getText());
-        } catch (PatternSyntaxException e) {
+        } catch (
+                PatternSyntaxException e) {
             LOGGER.debug(e.getMessage());
             return false;
         }
@@ -352,7 +353,9 @@ public class GlobalSearchBar extends HBox {
             Field privatePopup = AutoCompletionBinding.class.getDeclaredField("autoCompletionPopup");
             privatePopup.setAccessible(true);
             return (AutoCompletePopup<T>) privatePopup.get(autoCompletionBinding);
-        } catch (IllegalAccessException | NoSuchFieldException e) {
+        } catch (
+                IllegalAccessException |
+                NoSuchFieldException e) {
             LOGGER.error("Could not get access to auto completion popup", e);
             return new AutoCompletePopup<>();
         }

@@ -1,11 +1,11 @@
 package org.jabref.gui.search;
 
-import javafx.beans.property.ReadOnlyStringWrapper;
+import java.util.Objects;
+
 import org.jabref.gui.AbstractViewModel;
 import org.jabref.gui.ClipBoardManager;
 import org.jabref.gui.DialogService;
 import org.jabref.logic.l10n.Localization;
-import java.util.Objects;
 
 public class HistoryDialogViewModel extends AbstractViewModel {
 
@@ -27,11 +27,12 @@ public class HistoryDialogViewModel extends AbstractViewModel {
         searchHistories = histories;
     }
 
-    public String getSearchHistories() { return searchHistories;}
+    public String getSearchHistories() {
+        return searchHistories;
+    }
 
     public void copyHistoryToClipboard() {
         clipBoardManager.setContent(searchHistories);
         dialogService.notify(Localization.lang("Copied search histories to clipboard"));
     }
-
 }
