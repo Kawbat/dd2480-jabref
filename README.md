@@ -12,11 +12,7 @@ One or two sentences describing it
 
 ## Onboarding experience
 
-Did you choose a new project or continue on the previous one?
-
-If you changed the project, how did your experience differ from before?
-
-[TODO]
+We chose a new project since the previous project was a collection of algorithms which was not suitable for this assignment. The onboarding process for this project was more complicated since the overall software is more advanced and the code complexity is also higher. However, the project provides detailed documentation of how to set up a local environment in order to build and work on the project. While the setup took some time to complete it was well documented and easy to follow.
 
 ## Effort spent
 
