@@ -41,7 +41,7 @@ It supports you in every step of your research work.
 ### Share
 
 - Many built-in export options or create your export format
-- Library is saved as a simple text file and thus it is easy to share with others via Dropbox and is version-control friendly
+- Library is saved as a simple text file and thus it is easy to share with others via Dropbox and is version-control friendly 
 - Work in a team: sync the contents of your library via a SQL database
 
 ## Installation
