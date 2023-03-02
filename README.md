@@ -72,9 +72,33 @@ Summary in one or two sentences
 
 Scope (functionality and code affected).
 
-## Requirements for the new feature or requirements affected by functionality being refactored
+## Requirements
 
-Optional (point 3): trace tests to requirements.
+### Issue #7906: Record search history
+
+<https://github.com/JabRef/jabref/issues/7906>
+
+Requirements:
+
+* `R01`: Save queries  
+The queries performed by the user should be saved in a search history. Empty queries should not be saved in the search history and equal queries should only occur once in the search history. The search history should be limited to the 10 most recent queries.
+* `R02`: View queries  
+The user should be able to view the current search history by clicking on a button next to the search bar. When clicking on this button a window should be opened which lists all of the queries in the search history.
+* `R03`: Utilize queries  
+The user should be able to click on a specific entry from the search history window in order to repeat the same query again. After the click has been performed the search history window should be closed and the search bar should be filled with the query.
+* `R04`: Remove queries  
+The user should be able to remove entries from the search history window, either by clicking on the remove button next to each corresponding entry, or by clicking on the clear button for the entire search history list.
+
+Tests:
+
+* `R01`: Save queries  
+[TODO]
+* `R02`: View queries  
+[TODO]
+* `R03`: Utilize queries  
+[TODO]
+* `R04`: Remove queries  
+[TODO]
 
 ## Code changes
 
