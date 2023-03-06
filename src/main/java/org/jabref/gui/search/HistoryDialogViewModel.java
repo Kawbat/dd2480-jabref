@@ -27,6 +27,10 @@ public class HistoryDialogViewModel extends AbstractViewModel {
         return this.stateManager.getSearchHistory().getHistory();
     }
 
+    public void remove(String searchTerm) {
+        this.stateManager.getSearchHistory().remove(searchTerm);
+    }
+
     public void copyHistoryToClipboard() {
         clipBoardManager.setContent("toCopy");
         dialogService.notify(Localization.lang("Copied search histories to clipboard"));
