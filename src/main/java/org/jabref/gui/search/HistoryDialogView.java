@@ -4,8 +4,10 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.input.MouseButton;
 
 import org.jabref.gui.ClipBoardManager;
 import org.jabref.gui.DialogService;
@@ -18,6 +20,7 @@ import org.jabref.logic.l10n.Localization;
 
 import com.airhacks.afterburner.views.ViewLoader;
 import jakarta.inject.Inject;
+import org.controlsfx.control.textfield.CustomTextField;
 
 public class HistoryDialogView extends BaseDialog<Void> {
 
@@ -32,10 +35,12 @@ public class HistoryDialogView extends BaseDialog<Void> {
 
     private final StateManager stateManager;
     private HistoryDialogViewModel viewModel;
+    private final CustomTextField searchField;
 
-    public HistoryDialogView(StateManager stateManager) {
+    public HistoryDialogView(StateManager stateManager, CustomTextField searchField) {
         this.setTitle(Localization.lang("Search History"));
         this.stateManager = stateManager;
+        this.searchField = searchField;
 
         ViewLoader.view(this)
                   .load()
@@ -51,6 +56,18 @@ public class HistoryDialogView extends BaseDialog<Void> {
     @FXML
     private void initialize() {
         viewModel = new HistoryDialogViewModel(dialogService, clipBoardManager, stateManager);
+
+        searchHistoryTable.setRowFactory(tableView -> {
+            TableRow<SearchHistoryItem> row = new TableRow<>();
+            row.setOnMouseClicked(evt -> {
+                if (!row.isEmpty() && evt.getButton() == MouseButton.PRIMARY && evt.getClickCount() == 2) {
+                    String searchStringClicked = row.getItem().searchStringProperty().get();
+                    searchField.setText(searchStringClicked);
+                    this.close();
+                }
+            });
+            return row;
+        });
 
         searchHistoryStringColumn.setEditable(false);
         searchHistoryStringColumn.setCellFactory(TextFieldTableCell.forTableColumn());
