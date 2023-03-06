@@ -14,7 +14,6 @@ public class SearchHistory {
     private final int historyMaxSize = 10;
 
     public SearchHistory() {
-
     }
 
     public ObservableList<SearchHistoryItem> getHistory() {
@@ -23,7 +22,7 @@ public class SearchHistory {
 
     public void remove(String toRemove) {
         int index = -1;
-        for (int i = 0; i < history.size(); i ++) {
+        for (int i = 0; i < history.size(); i++) {
             if (history.get(i).searchStringProperty().get().equals(toRemove)) {
                 index = i;
                 break;
@@ -40,7 +39,7 @@ public class SearchHistory {
         toAdd = toAdd.trim();
 
         int index = -1;
-        for (int i = 0; i < history.size(); i ++) {
+        for (int i = 0; i < history.size(); i++) {
             if (history.get(i).searchStringProperty().get().equals(toAdd)) {
                 index = i;
                 break;
@@ -77,7 +76,5 @@ public class SearchHistory {
 
             history.remove(idx);
         }
-
     }
-
 }
