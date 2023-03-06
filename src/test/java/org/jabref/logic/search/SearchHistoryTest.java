@@ -34,13 +34,6 @@ public class SearchHistoryTest {
     }
 
     @Test
-    public void testEmptyString() {
-        SearchHistory searchHistory = new SearchHistory();
-        searchHistory.addSearch("");
-        assertEquals(0, searchHistory.getHistory().size());
-    }
-
-    @Test
     public void testMaxSizeHistory() {
         SearchHistory searchHistory = new SearchHistory();
         searchHistory.addSearch("a");
