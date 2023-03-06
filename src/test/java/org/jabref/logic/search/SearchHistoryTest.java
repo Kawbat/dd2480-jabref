@@ -39,4 +39,21 @@ public class SearchHistoryTest {
         searchHistory.addSearch("");
         assertEquals(0, searchHistory.getHistory().size());
     }
+
+    @Test
+    public void testMaxSizeHistory() {
+        SearchHistory searchHistory = new SearchHistory();
+        searchHistory.addSearch("a");
+        searchHistory.addSearch("b");
+        searchHistory.addSearch("c");
+        searchHistory.addSearch("d");
+        searchHistory.addSearch("e");
+        searchHistory.addSearch("f");
+        searchHistory.addSearch("g");
+        searchHistory.addSearch("h");
+        searchHistory.addSearch("i");
+        searchHistory.addSearch("j");
+        searchHistory.addSearch("asd");
+        assertEquals(10, searchHistory.getHistory().size());
+    }
 }
