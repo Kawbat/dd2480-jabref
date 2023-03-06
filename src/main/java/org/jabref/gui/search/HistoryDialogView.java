@@ -66,6 +66,7 @@ public class HistoryDialogView extends BaseDialog<Void> {
         new ValueTableCellFactory<SearchHistoryItem, String>()
                 .withGraphic(item -> IconTheme.JabRefIcons.DELETE_ENTRY.getGraphicNode())
                 .withTooltip(name -> Localization.lang("Remove"))
+                .withOnMouseClickedEvent(item -> evt -> viewModel.remove(item))
                 .install(searchHistoryRemoveColumn);
 
         searchHistoryTable.setItems(viewModel.getHistory());
