@@ -1,5 +1,6 @@
 package org.jabref.gui.search;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
@@ -9,8 +10,10 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import org.jabref.gui.ClipBoardManager;
 import org.jabref.gui.DialogService;
 import org.jabref.gui.StateManager;
+import org.jabref.gui.icon.IconTheme;
 import org.jabref.gui.util.BaseDialog;
 import org.jabref.gui.util.ControlHelper;
+import org.jabref.gui.util.ValueTableCellFactory;
 import org.jabref.logic.l10n.Localization;
 
 import com.airhacks.afterburner.views.ViewLoader;
@@ -22,6 +25,7 @@ public class HistoryDialogView extends BaseDialog<Void> {
     @FXML private TableView<SearchHistoryItem> searchHistoryTable;
     @FXML private TableColumn<SearchHistoryItem, String> searchHistoryStringColumn;
     @FXML private TableColumn<SearchHistoryItem, String> searchHistoryDateColumn;
+    @FXML private TableColumn<SearchHistoryItem, String> searchHistoryRemoveColumn;
 
     @Inject private DialogService dialogService;
     @Inject private ClipBoardManager clipBoardManager;
@@ -55,6 +59,14 @@ public class HistoryDialogView extends BaseDialog<Void> {
         searchHistoryDateColumn.setEditable(false);
         searchHistoryDateColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         searchHistoryDateColumn.setCellValueFactory(param -> param.getValue().lastSearchedProperty());
+
+        searchHistoryRemoveColumn.setEditable(false);
+        searchHistoryRemoveColumn.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().searchStringProperty().get()));
+
+        new ValueTableCellFactory<SearchHistoryItem, String>()
+                .withGraphic(item -> IconTheme.JabRefIcons.DELETE_ENTRY.getGraphicNode())
+                .withTooltip(name -> Localization.lang("Remove"))
+                .install(searchHistoryRemoveColumn);
 
         searchHistoryTable.setItems(viewModel.getHistory());
 
