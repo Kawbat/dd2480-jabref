@@ -58,7 +58,7 @@ public class SearchHistory {
         // Add it to the end
         history.add(newItem);
 
-        if (history.size() > 10) {
+        if (history.size() > historyMaxSize) {
             int idx = 0;
             SimpleDateFormat simpleFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             Date mostAncientDate = new Date();
