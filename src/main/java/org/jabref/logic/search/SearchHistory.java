@@ -9,7 +9,7 @@ public class SearchHistory {
     private ObservableList<SearchHistoryItem> history = FXCollections.observableArrayList();
 
     public SearchHistory() {
-
+        this.history.add(new SearchHistoryItem("hello world"));
     }
 
     public ObservableList<SearchHistoryItem> getHistory() {

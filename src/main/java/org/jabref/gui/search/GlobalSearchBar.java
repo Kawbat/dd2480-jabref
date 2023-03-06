@@ -258,8 +258,8 @@ public class GlobalSearchBar extends HBox {
         initSearchModifierButton(openSearchHistoryButton);
         openSearchHistoryButton.setOnAction(evt -> {
             searchHistoryActive.setValue(true);
-            historyDialogView = new HistoryDialogView();
-            DialogService dialogService = Injector.instantiateModelOrService(DialogService.class);
+            historyDialogView = new HistoryDialogView(stateManager);
+            //DialogService dialogService = Injector.instantiateModelOrService(DialogService.class);
             dialogService.showCustomDialogAndWait(historyDialogView);
             searchHistoryActive.setValue(false);
         });

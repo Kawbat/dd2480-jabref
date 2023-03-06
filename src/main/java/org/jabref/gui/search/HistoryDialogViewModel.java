@@ -2,37 +2,33 @@ package org.jabref.gui.search;
 
 import java.util.Objects;
 
+import javafx.collections.ObservableList;
+
 import org.jabref.gui.AbstractViewModel;
 import org.jabref.gui.ClipBoardManager;
 import org.jabref.gui.DialogService;
+import org.jabref.gui.StateManager;
 import org.jabref.logic.l10n.Localization;
 
 public class HistoryDialogViewModel extends AbstractViewModel {
 
-    private final String searchHistories;
     private final DialogService dialogService;
     private final ClipBoardManager clipBoardManager;
 
-    public HistoryDialogViewModel(DialogService dialogService, ClipBoardManager clipBoardManager) {
+    private final StateManager stateManager;
+
+    public HistoryDialogViewModel(DialogService dialogService, ClipBoardManager clipBoardManager, StateManager stateManager) {
         this.dialogService = Objects.requireNonNull(dialogService);
         this.clipBoardManager = Objects.requireNonNull(clipBoardManager);
-
-        String histories = "history0\n";
-        String history1 = "history1";
-        String history2 = "history2";
-        histories = histories.concat(history1);
-        histories = histories.concat("\n");
-        histories = histories.concat(history2);
-        histories = histories.concat("\n");
-        searchHistories = histories;
+        this.stateManager = stateManager;
     }
 
-    public String getSearchHistories() {
-        return searchHistories;
+    public ObservableList<SearchHistoryItem> getHistory() {
+        return this.stateManager.getSearchHistory().getHistory();
     }
 
     public void copyHistoryToClipboard() {
-        clipBoardManager.setContent(searchHistories);
+        clipBoardManager.setContent("toCopy");
         dialogService.notify(Localization.lang("Copied search histories to clipboard"));
     }
 }
