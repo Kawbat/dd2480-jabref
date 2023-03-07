@@ -128,3 +128,54 @@ How did you grow as a team, using the Essence standard to evaluate yourself?
 Optional (point 6): How would you put your work in context with best software engineering practice?
 
 Optional (point 7): Is there something special you want to mention here?
+
+## Purpose and structure of the project
+### Purpose of JabRef
+JabRef is an open-source, cross-platform citation and reference management tool. It helps to collect and organize sources, find the paper and discover the latest research.
+
+JabRef has four key features:
+
+#### 1. Collect:
+- Search across many online scientific catalogues like CiteSeer, CrossRef, Google Scholar, IEEEXplore, INSPIRE-HEP, Medline PubMed, MathSciNet, Springer, arXiv, and zbMATH
+- Import options for over 15 reference formats
+- Easily retrieve and link full-text articles
+- Fetch complete bibliographic information based on ISBN, DOI, PubMed-ID and arXiv-ID
+- Extract metadata from PDFs
+- Import new references directly from the browser with one click using the official browser extension for Firefox, Chrome, Edge and Vivaldi
+
+#### 2. Organize:
+- Group your research into hierarchical collections and organize research items based on keywords/tags, search terms or your manual assignments
+- Advanced search and filter features
+- Complete and fix bibliographic data by comparing with curated online catalogues such as Google Scholar, Springer or MathSciNet
+- Customizable citation key generator
+- Customize and add new metadata fields or reference types
+- Find and merge duplicates
+- Attach related documents: 20 different kinds of documents supported out of the box, completely customizable and extendable
+- Automatically rename and move associated documents according to customizable rules
+- Keep track of what you read: ranking, priority, printed, quality-assured
+
+#### 3. Cite:
+- Native BibTeX and Biblatex support
+- Cite-as-you-write functionality for external applications such as Emacs, Kile, LyX, Texmaker, TeXstudio, Vim and WinEdt.
+- Format references in one of the many thousand built-in citation styles or create your style
+- Support for Word and LibreOffice/OpenOffice for inserting and formatting citations
+
+#### 4. Share:
+- Many built-in export options or create your export format
+- Library is saved as a simple text file and thus it is easy to share with others via Dropbox and is version-control friendly
+- Work in a team: sync the contents of your library via a SQL database
+
+### Architecture of JabRef
+JabRef has a structured architecture with the`model`in the center, and the`logic`
+as an intermediate layer towards the`gui`which is the outer shell. There are additional utility packages for`preferences`and the`cli`. The dependencies are only directed towards the center. We have JUnit tests to detect violations of the most crucial dependencies (between`logic`,`model`, and`gui`), and the build will fail automatically in these cases.
+
+The`model`represents the most important data structures (`BibDatases`,`BibEntries`,`Events`, and related aspects) and has only a little bit of logic attached. The`logic`is responsible for reading/writing/importing/exporting and manipulating the`model`, and it is structured often as an API the`gui`can call and use. Only the`gui`knows the user and their preferences and can interact with them to help them solving tasks. For each layer, we form packages according to their responsibility, i.e., vertical structuring. The`model`should have no dependencies to other classes of JabRef and the`logic`should only depend on`model`classes. The`cli`package bundles classes that are responsible for JabRef’s command line interface. The`preferences`package represents all information customizable by a user for her personal needs.
+
+We use an event bus to publish events from the`model`to the other layers. This allows us to keep the architecture but still react upon changes within the core in the outer layers.
+
+Both GUI and CLI are started via the`JabRefMain`which will in turn call`JabRef`
+which then decides whether the GUI (`JabRefFrame`) or the CLI (`JabRefCLI`
+and a lot of code in`JabRef`) will be started. The`JabRefFrame`represents the Window which contains a`SidePane`on the left used for the fetchers/groups Each tab is a`BasePanel`which has a`SearchBar`at the top, a`MainTable`at the center and a`PreviewPanel`or an`EntryEditor`at the bottom. Any right click on the`MainTable`
+is handled by the`RightClickMenu`. Each`BasePanel`holds a`BibDatabaseContext`
+consisting of a`BibDatabase`and the`MetaData`, which are the only relevant data of the currently shown database. A`BibDatabase`has a list of`BibEntries`. Each`BibEntry`
+has an ID, a citation key and a key/value store for the fields with their values. Interpreted data (such as the type or the file field) is stored in the`TypedBibentry`type. The user can change the`JabRefPreferences`through the`PreferencesDialog`.
