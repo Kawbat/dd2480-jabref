@@ -50,8 +50,7 @@ The user should be able to remove entries from the search history window, either
 
 #### Tests
 
-We implemented tests directly for the logical structure containing the SearchHistory, and the application part of the requirements was tested manually because we did not manage to find a suitable testing technique for the GUI on this project.
-All test can be found in [SearchHistoryTest.java](https://github.com/Kawbat/dd2480-jabref/blob/d16e1e551c4ba6e62b0cc50b0f4261148596078a/src/test/java/org/jabref/logic/search/SearchHistoryTest.java)
+We implemented tests directly for the logical structure containing the SearchHistory, and the application part of the requirements was tested manually because we did not manage to find a suitable testing technique for the GUI on this project. All test can be found in [SearchHistoryTest.java](https://github.com/Kawbat/dd2480-jabref/blob/d16e1e551c4ba6e62b0cc50b0f4261148596078a/src/test/java/org/jabref/logic/search/SearchHistoryTest.java)
 
 * `R01`: Save queries  
 Adding queries is checked by `testItemsAdded` and limited size of the history is checked by `testMaxSizeHistory`.
@@ -99,14 +98,9 @@ New files:
 * HistoryDialogViewModel.java
 * SearchHistoryItem.java
 * SearchHistory.java
-* GlobalSearchBarTest.java
 * SearchHistoryTest.java
 
 For more details, we uploaded the patch file `diff` to the repository.
-
-Optional (point 4): the patch is clean.
-
-Optional (point 5): considered for acceptance (passes all automated checks).
 
 ## Test results
 
@@ -124,9 +118,9 @@ Then simply click run "Run Tests" to get the test log.
 
 ### Key changes/classes affected
 
-Optional (point 1): Architectural overview.
+While implementing the new features, we tried to stick to the existing software architecture, as closely as possible. This was partly due to us wanting to keep a consistent structure throughout the application, as it improves readability and makes it easier for others to review, understand and expand upon our additions to the source code. The other reason for this was simply that by closely studying the already existing features of the project, we were able to learn how to implement the new features. Then it followed naturally that our code stayed close to the original project structure. We were also introduced to a new design pattern, with which we were not that familiar. This pattern was the observer pattern. While we were not deeply exposed to the underlying implementation of the observers, we understood that JavaFX used observers in order to determine when data relevant to tables was updated, and the GUI could be redrawn. By keeping an ObservableList in our SearchHistory class, we could use this list to set the items of a JavaFX TableView. This caused JavaFX to automatically refresh the GUI whenever the ObservableList was modified.
 
-Optional (point 2): relation to design pattern(s).
+In terms of refactoring, we have also implemented the new feature in its own class instead of just appending it to previous classes. This could be linked to the extract class refactoring method which moves functionality out of one large class into smaller classes in order to reduce the complexity of the class.
 
 ## Overall experience
 
@@ -150,10 +144,6 @@ The main take-aways we gained from this project are:
 * we improved our ability to get our bearings in a very large and complex projects, by using the documentation, sharing our knowledge between different members of the team, and learning to locate the parts of the code that we were interested in and ignore the rest even if we don't understand everything
 * we gained experience in writing GUI application and learned a lot about testing it, even though testing the GUI ended up being too complicated on this particular project
 * we learned a lot about each other as a team, and how to handle difficulties in communication or division of the work
-
-Optional (point 6): How would you put your work in context with best software engineering practice?
-
-Optional (point 7): Is there something special you want to mention here?
 
 ## Purpose and structure of the project
 
