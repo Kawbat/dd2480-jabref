@@ -1,0 +1,768 @@
+diff --git a/README.md b/README.md
+index 1134969f3..1593cd530 100644
+--- a/README.md
++++ b/README.md
+@@ -1,103 +1,216 @@
+-# JabRef Bibliography Management
++# DD2480 - Assignment 4
+ 
+-JabRef is an open-source, cross-platform citation and reference management tool.
++## Project
+ 
+-Stay on top of your literature: JabRef helps you to collect and organize sources, find the paper you need and discover the latest research.
+-[![main table](docs/images/jabref-mainscreen.png)](http://www.jabref.org/img/jabref-mainscreen.png)
++JabRef
+ 
+-## Features
++<https://github.com/JabRef/jabref>
+ 
+-JabRef is available free of charge and is actively developed.
+-It supports you in every step of your research work.
++JabRef is a citation and reference management tool which allows the user to collect and organize various research papers. It has a graphical user interface and is implemented in Java.
+ 
+-### Collect
++## Onboarding experience
+ 
+-- Search across many online scientific catalogues like CiteSeer, CrossRef, Google Scholar, IEEEXplore, INSPIRE-HEP, Medline PubMed, MathSciNet, Springer, arXiv, and zbMATH
+-- Import options for over 15 reference formats
+-- Easily retrieve and link full-text articles
+-- Fetch complete bibliographic information based on ISBN, DOI, PubMed-ID and arXiv-ID
+-- Extract metadata from PDFs
+-- Import new references directly from the browser with one click using the [official browser extension](https://github.com/JabRef/JabRef-Browser-Extension) for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/jabref/?src=external-github),  [Chrome](https://chrome.google.com/webstore/detail/jabref-browser-extension/bifehkofibaamoeaopjglfkddgkijdlh), [Edge](https://microsoftedge.microsoft.com/addons/detail/pgkajmkfgbehiomipedjhoddkejohfna) and [Vivaldi](https://chrome.google.com/webstore/detail/jabref-browser-extension/bifehkofibaamoeaopjglfkddgkijdlh)
++We chose a new project since the previous project was a collection of algorithms which was not suitable for this assignment. The onboarding process for this project was more complicated since the overall software is more advanced and the code complexity is also higher. However, the project provides detailed documentation of how to set up a local environment in order to build and work on the project. While the setup took some time to complete it was well documented and easy to follow.
+ 
+-### Organize
++## Effort spent
+ 
+-- Group your research into hierarchical collections and organize research items based on keywords/tags, search terms or your manual assignments
+-- Advanced search and filter features
+-- Complete and fix bibliographic data by comparing with curated online catalogues such as Google Scholar, Springer or MathSciNet
+-- Customizable citation key generator
+-- Customize and add new metadata fields or reference types
+-- Find and merge duplicates
+-- Attach related documents: 20 different kinds of documents supported out of the box, completely customizable and extendable
+-- Automatically rename and move associated documents according to customizable rules
+-- Keep track of what you read: ranking, priority, printed, quality-assured
++For each team member, how much time was spent in
+ 
+-### Cite
++1. plenary discussions/meetings;
+ 
+-- Native BibTeX and Biblatex support
+-- Cite-as-you-write functionality for external applications such as Emacs, Kile, LyX, Texmaker, TeXstudio, Vim and WinEdt.
+-- Format references in one of the many thousand built-in citation styles or create your style
+-- Support for Word and LibreOffice/OpenOffice for inserting and formatting citations
++2. discussions within parts of the group;
+ 
+-### Share
++3. reading documentation;
+ 
+-- Many built-in export options or create your export format
+-- Library is saved as a simple text file and thus it is easy to share with others via Dropbox and is version-control friendly
+-- Work in a team: sync the contents of your library via a SQL database
++4. configuration and setup;
+ 
+-## Installation
++5. analyzing code/output;
+ 
+-Fresh development builds are available at [builds.jabref.org](https://builds.jabref.org/main/).
+-The [latest stable release is available at FossHub](https://downloads.jabref.org/).
++6. writing documentation;
+ 
+-Please see our [Installation Guide](https://docs.jabref.org/installation).
++7. writing code;
+ 
+-## Bug Reports, Suggestions, Other Feedback
++8. running code?
+ 
+-[![Donation](https://img.shields.io/badge/donate%20to-jabref-orange.svg)](https://donations.jabref.org)
+-[![Paypal Donate](https://img.shields.io/badge/donate-paypal-00457c.svg?logo=paypal&style=flat-square)](https://paypal.me/JabRef)
++For setting up tools and libraries (step 4), enumerate all dependencies
++you took care of and where you spent your time, if that time exceeds
++30 minutes.
+ 
+-We are thankful for any bug reports or other feedback.
+-If you have ideas for new features you want to be included in JabRef, tell us in [the feature section](http://discourse.jabref.org/c/features) of our forum!
+-If you need support in using JabRef, please read [the documentation](https://docs.jabref.org/) first, the [frequently asked questions (FAQ)](https://docs.jabref.org/faq) and also have a look at our [community forum](https://discourse.jabref.org/c/help/7).
+-You can use our [GitHub issue tracker](https://github.com/JabRef/jabref/issues) to file bug reports.
++### Marcus
+ 
+-An explanation of donation possibilities and usage of donations is available at our [donations page](https://donations.jabref.org).
++[TODO]
+ 
+-## Contributing
++### Oscar
+ 
+-[![dev-docs](https://img.shields.io/badge/dev-docs-blue)](https://devdocs.jabref.org/)
+-[![Help Contribute to Open Source](https://www.codetriage.com/jabref/jabref/badges/users.svg)](https://www.codetriage.com/jabref/jabref)
+-[![Join the chat at https://gitter.im/JabRef/jabref](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/JabRef/jabref?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+-[![OpenHub](https://www.openhub.net/p/jabref/widgets/project_thin_badge.gif)](https://www.openhub.net/p/jabref)
+-[![Deployment Status](https://github.com/JabRef/jabref/workflows/Deployment/badge.svg)](https://github.com/JabRef/jabref/actions?query=workflow%3ADeployment)
+-[![Test Status](https://github.com/JabRef/jabref/workflows/Tests/badge.svg)](https://github.com/JabRef/jabref/actions?query=workflow%3ATests)
+-[![codecov.io](https://codecov.io/github/JabRef/jabref/coverage.svg?branch=master)](https://codecov.io/github/JabRef/jabref?branch=main)
++[TODO]
+ 
+-Want to be part of a free and open-source project that tens of thousands of scientists use every day?
+-Check out the ways you can contribute, below:
++### Pauline
+ 
+-- Not a programmer? Help translating JabRef at [Crowdin](https://crowdin.com/project/jabref) or learn how to help at [contribute.jabref.org](https://contribute.jabref.org)
+-- Quick overview on the architecture needed? Look at our [high-level documentation](https://devdocs.jabref.org/getting-into-the-code/high-level-documentation)
+-- For details on how to contribute, have a look at our [guidelines for contributing](CONTRIBUTING.md).
+-- You are welcome to contribute new features. To get your code included into JabRef, just [fork](https://help.github.com/en/articles/fork-a-repo) the JabRef repository, make your changes, and create a [pull request](https://help.github.com/en/articles/about-pull-requests).
+-- To work on existing JabRef issues, check out our [issue tracker](https://github.com/JabRef/jabref/issues). New to open source contributing? Look for issues with the ["good first issue"](https://github.com/JabRef/jabref/labels/good%20first%20issue) label to get started.
++[TODO]
+ 
+-We view pull requests as a collaborative process.
+-Submit a pull request early to get feedback from the team on work in progress.
+-We will discuss improvements with you and agree to merge them once the [developers](https://github.com/JabRef/jabref/blob/main/MAINTAINERS) approve. Please also remember to discuss bigger changes early with the core developers to avoid a waste of time and work. Some fundamental design decisions can be found within our list of [Architectural Decision Records](https://devdocs.jabref.org/decisions/).
++### Simon
+ 
+-If you want a step-by-step walk-through on how to set-up your workspace, please check [this guideline](https://devdocs.jabref.org/getting-into-the-code/guidelines-for-setting-up-a-local-workspace).
++[TODO]
+ 
+-To compile JabRef from source, you need a Java Development Kit 19 and `JAVA_HOME` pointing to this JDK.
+-To run it, just execute `gradlew run`.
+-When you want to develop, it is necessary to generate additional sources using `gradlew generateSource`
+-and then generate the Eclipse `gradlew eclipse`.
+-For IntelliJ IDEA, just import the project via a Gradle Import by pointing at the `build.gradle`.
++### Siyang
+ 
+-`gradlew test` executes all tests. We use [Github Actions](https://github.com/JabRef/jabref/actions) for executing the tests after each commit. For developing, it is sufficient to locally only run the associated test for the classes you changed. Github will report any other failure.
++[TODO]
+ 
+-## Sponsoring
++## Overview
+ 
+-JabRef development is powered by YourKit Java Profiler [![YourKit Java Profiler](https://www.yourkit.com/images/yk_logo.png)](https://www.yourkit.com/java/profiler/)
++### Issue #7906: Record search history
+ 
+-[JabRef]: https://www.jabref.org
++Implement recording of search history so that the user can view previous search queries in order to refine or repeat new searches and also allow the user to remove one or multiple entries in the search history.
++
++<https://github.com/JabRef/jabref/issues/7906>
++
++The search history management should be implemented in a separate class called `SearchHistory` where the list itself is handled by a `LinkedHashSet` data structure. This automatically avoids duplicate entries and also keeps the order that entries are saved in. When the user performs a search this query should also be forwarded from `GlobalSearchBar` to the `SearchHistory` class which validates it and then stores it in the data structure. Further `GlobalSearchBar` also needs to be modified in order to append the history button to the side of the search bar.
++
++### Requirements
++
++* `R01`: Save queries  
++The queries performed by the user should be saved in a search history. Empty queries should not be saved in the search history and equal queries should only occur once in the search history. The search history should be limited to the 10 most recent queries.
++* `R02`: View queries  
++The user should be able to view the current search history by clicking on a button next to the search bar. When clicking on this button a window should be opened which lists all of the queries in the search history.
++* `R03`: Utilize queries  
++The user should be able to click on a specific entry from the search history window in order to repeat the same query again. After the click has been performed the search history window should be closed and the search bar should be filled with the query.
++* `R04`: Remove queries  
++The user should be able to remove entries from the search history window, either by clicking on the remove button next to each corresponding entry, or by clicking on the clear button for the entire search history list.
++
++#### Tests:
++
++We implemented tests directly for the logical structure containing the SearchHistory, and the application part of the requirements was tested manually because we did not manage to find a suitable testing technique for the GUI on this project.
++All test can be found in [SearchHistoryTest.java](https://github.com/Kawbat/dd2480-jabref/blob/d16e1e551c4ba6e62b0cc50b0f4261148596078a/src/test/java/org/jabref/logic/search/SearchHistoryTest.java)
++
++* `R01`: Save queries  
++Adding queries is checked by `testItemsAdded` and limited size of the history is checked by `testMaxSizeHistory`.
++* `R02`: View queries  
++This requirement was tested manually.
++* `R03`: Utilize queries  
++This requirement was tested manually, and `testTimeUpdated` tests that when a search is performed a second time, its date is updated.
++* `R04`: Remove queries  
++Removing a query is checked by `testItemsRemoved`.
++
++## Code changes
++
++### Patch
++
++(copy your changes or the add git command to show them)
++
++git diff ...
++
++Optional (point 4): the patch is clean.
++
++Optional (point 5): considered for acceptance (passes all automated checks).
++
++## Test results
++
++After implementing our new feature we wrote tests to make all the functions work and behave properly. Ultimately we decided to write tests for the GUI implementation and found a testing framework called TestFX. Although it was a lot harder than we initially thought. After spending a rather large amount of time on trying to figure out TestFX we had to scrap the idea due to the fact that JabRef didn’t seem to integrate well with TestFX. Although we did manual tests of the GUI to make sure all the functionality of the GUI worked as intended.  Instead we decided to just make tests for the logical aspects of our implementation. We created a test class called `SearchHistoryTest` for the tests.
++
++The tests created can be seen on the following link: <https://github.com/Kawbat/dd2480-jabref/blob/main/src/test/java/org/jabref/logic/search/SearchHistoryTest.java>
++
++For our test log we decided to use the Automated Github Actions as reference.
++
++To run the test log you can navigate to the following link: <https://github.com/Kawbat/dd2480-jabref/actions/runs/4364677845/jobs/7632289433>
++
++Then simply click run “Run Tests” to get the test log.
++
++
++## UML class diagram and its description
++
++### Key changes/classes affected
++
++Optional (point 1): Architectural overview.
++
++Optional (point 2): relation to design pattern(s).
++
++## Overall experience
++
++During this project, we experimented the difficulty to enter and participate in a large and complex project, on an issue which concerned multiple parts of the code.
++Indeed, our project entails both the logic part and the application part of the search tool, and most of us did not have a lot of experience with GUI in particular.
++
++In the end, we managed to:
++
++* establish the requirements for our feature
++* add a structure to keep track of the search history 
++* add a button and a window to display the search history
++* add tests for our feature corresponding to the established requirements
++* keep the repository clean and respect the required style of the main repo
++* document our work to keep track of how far we were along the way
++
++During this project, we had some trouble being as efficient as a team as we were on the previous project, but this taught us a lot about how to handle drops in motivation or miscommunication.
++According to the ESSENCE framework, we think that we have reached state Collaborating.
++It took us some time to reach the Seeded state by rethinking our team dynamic at the beginning of this project, because we didn't know right away which competences were needed and how each member wanted to spend their time on the project, especially because the time constraints were not the same as with the previous projects. However, we kept the same governance rules as before.
++However, we then managed to reach the Formed and Collaborating state by dividing the tasks and starting to take our individual responsibilities and communicate more openly at the end of the first week.
++We feel that an item is still missing for us to reach the Performing state, because we have had a few inefficiencies during our work (hard time dividing the work, part of the work being carried out twice, etc) and we are still not active in identifying the potential for wasted work, so we should work on this as a group rather than just individually.
++
++We did not exchange much with the community of this project, but we thought that overall the project was very well described and easy to set up, although it took us a lot of time to really understand the structure of the project.
++We would have like to contribute to the project but someone else worked on our issue at the same time, so we couldn't create our own PR on top of theirs. This was disappointing for us, but we are still happy with the work we carried out. 
++
++The main take-aways we gained from this project are:
++* we improved our ability to get our bearings in a very large and complex projects, by using the documentation, sharing our knowledge between different members of the team, and learning to locate the parts of the code that we were interested in and ignore the rest even if we don't understand everything
++* we gained experience in writing GUI application and learned a lot about testing it, even though testing the GUI ended up being too complicated on this particular project
++* we learned a lot about each other as a team, and how to handle difficulties in communication or division of the work
++
++
++Optional (point 6): How would you put your work in context with best software engineering practice?
++
++Optional (point 7): Is there something special you want to mention here?
++
++## Purpose and structure of the project
++
++### Purpose of JabRef
++
++JabRef is an open-source, cross-platform citation and reference management tool. It helps to collect and organize sources, find the paper and discover the latest research.
++
++JabRef has four key features:
++
++#### 1. Collect:
++
++* Search across many online scientific catalogues like CiteSeer, CrossRef, Google Scholar, IEEEXplore, INSPIRE-HEP, Medline PubMed, MathSciNet, Springer, arXiv, and zbMATH
++* Import options for over 15 reference formats
++* Easily retrieve and link full-text articles
++* Fetch complete bibliographic information based on ISBN, DOI, PubMed-ID and arXiv-ID
++* Extract metadata from PDFs
++* Import new references directly from the browser with one click using the official browser extension for Firefox, Chrome, Edge and Vivaldi
++
++#### 2. Organize:
++
++* Group your research into hierarchical collections and organize research items based on keywords/tags, search terms or your manual assignments
++* Advanced search and filter features
++* Complete and fix bibliographic data by comparing with curated online catalogues such as Google Scholar, Springer or MathSciNet
++* Customizable citation key generator
++* Customize and add new metadata fields or reference types
++* Find and merge duplicates
++* Attach related documents: 20 different kinds of documents supported out of the box, completely customizable and extendable
++* Automatically rename and move associated documents according to customizable rules
++* Keep track of what you read: ranking, priority, printed, quality-assured
++
++#### 3. Cite:
++
++* Native BibTeX and Biblatex support
++* Cite-as-you-write functionality for external applications such as Emacs, Kile, LyX, Texmaker, TeXstudio, Vim and WinEdt.
++* Format references in one of the many thousand built-in citation styles or create your style
++* Support for Word and LibreOffice/OpenOffice for inserting and formatting citations
++
++#### 4. Share:
++
++* Many built-in export options or create your export format
++* Library is saved as a simple text file and thus it is easy to share with others via Dropbox and is version-control friendly
++* Work in a team: sync the contents of your library via a SQL database
++
++### Architecture of JabRef
++
++JabRef has a structured architecture with the`model`in the center, and the`logic`
++as an intermediate layer towards the`gui`which is the outer shell. There are additional utility packages for`preferences`and the`cli`. The dependencies are only directed towards the center. We have JUnit tests to detect violations of the most crucial dependencies (between`logic`,`model`, and`gui`), and the build will fail automatically in these cases.
++
++The`model`represents the most important data structures (`BibDatases`,`BibEntries`,`Events`, and related aspects) and has only a little bit of logic attached. The`logic`is responsible for reading/writing/importing/exporting and manipulating the`model`, and it is structured often as an API the`gui`can call and use. Only the`gui`knows the user and their preferences and can interact with them to help them solving tasks. For each layer, we form packages according to their responsibility, i.e., vertical structuring. The`model`should have no dependencies to other classes of JabRef and the`logic`should only depend on`model`classes. The`cli`package bundles classes that are responsible for JabRef’s command line interface. The`preferences`package represents all information customizable by a user for her personal needs.
++
++We use an event bus to publish events from the`model`to the other layers. This allows us to keep the architecture but still react upon changes within the core in the outer layers.
++
++Both GUI and CLI are started via the`JabRefMain`which will in turn call`JabRef`
++which then decides whether the GUI (`JabRefFrame`) or the CLI (`JabRefCLI`
++and a lot of code in`JabRef`) will be started. The`JabRefFrame`represents the Window which contains a`SidePane`on the left used for the fetchers/groups Each tab is a`BasePanel`which has a`SearchBar`at the top, a`MainTable`at the center and a`PreviewPanel`or an`EntryEditor`at the bottom. Any right click on the`MainTable`
++is handled by the`RightClickMenu`. Each`BasePanel`holds a`BibDatabaseContext`
++consisting of a`BibDatabase`and the`MetaData`, which are the only relevant data of the currently shown database. A`BibDatabase`has a list of`BibEntries`. Each`BibEntry`
++has an ID, a citation key and a key/value store for the fields with their values. Interpreted data (such as the type or the file field) is stored in the`TypedBibentry`type. The user can change the`JabRefPreferences`through the`PreferencesDialog`.
+diff --git a/src/main/java/org/jabref/gui/StateManager.java b/src/main/java/org/jabref/gui/StateManager.java
+index d7c3a797d..4016ac45d 100644
+--- a/src/main/java/org/jabref/gui/StateManager.java
++++ b/src/main/java/org/jabref/gui/StateManager.java
+@@ -27,6 +27,7 @@ import org.jabref.gui.util.BackgroundTask;
+ import org.jabref.gui.util.CustomLocalDragboard;
+ import org.jabref.gui.util.DialogWindowState;
+ import org.jabref.gui.util.OptionalObjectProperty;
++import org.jabref.logic.search.SearchHistory;
+ import org.jabref.logic.search.SearchQuery;
+ import org.jabref.model.database.BibDatabaseContext;
+ import org.jabref.model.entry.BibEntry;
+@@ -71,10 +72,19 @@ public class StateManager {
+ 
+     private final ObjectProperty<LastAutomaticFieldEditorEdit> lastAutomaticFieldEditorEdit = new SimpleObjectProperty<>();
+ 
++    private final ObjectProperty<SearchHistory> searchHistory = new SimpleObjectProperty<>();
++
+     public StateManager() {
+         activeGroups.bind(Bindings.valueAt(selectedGroups, activeDatabase.orElseOpt(null)));
+     }
+ 
++    public SearchHistory getSearchHistory() {
++        if (this.searchHistory.isNull().get()) {
++            this.searchHistory.set(new SearchHistory());
++        }
++        return this.searchHistory.get();
++    }
++
+     public ObservableList<SidePaneType> getVisibleSidePaneComponents() {
+         return visibleSidePanes;
+     }
+diff --git a/src/main/java/org/jabref/gui/icon/IconTheme.java b/src/main/java/org/jabref/gui/icon/IconTheme.java
+index 51cc77532..c412a314b 100644
+--- a/src/main/java/org/jabref/gui/icon/IconTheme.java
++++ b/src/main/java/org/jabref/gui/icon/IconTheme.java
+@@ -191,6 +191,7 @@ public class IconTheme {
+         REFRESH(MaterialDesignR.REFRESH),
+         DELETE_ENTRY(MaterialDesignD.DELETE),
+         SEARCH(MaterialDesignM.MAGNIFY),
++        SEARCH_HISTORY(MaterialDesignH.HISTORY),
+         FILE_SEARCH(MaterialDesignF.FILE_FIND),
+         PDF_METADATA_READ(MaterialDesignF.FORMAT_ALIGN_TOP),
+         PDF_METADATA_WRITE(MaterialDesignF.FORMAT_ALIGN_BOTTOM),
+diff --git a/src/main/java/org/jabref/gui/search/GlobalSearchBar.java b/src/main/java/org/jabref/gui/search/GlobalSearchBar.java
+index d37c5b265..2baa7eef5 100644
+--- a/src/main/java/org/jabref/gui/search/GlobalSearchBar.java
++++ b/src/main/java/org/jabref/gui/search/GlobalSearchBar.java
+@@ -106,6 +106,10 @@ public class GlobalSearchBar extends HBox {
+ 
+     private final BooleanProperty globalSearchActive = new SimpleBooleanProperty(false);
+     private GlobalSearchResultDialog globalSearchResultDialog;
++    private HistoryDialogView historyDialogView;
++
++    private final Button openSearchHistoryButton;
++    private final BooleanProperty searchHistoryActive = new SimpleBooleanProperty(false);
+ 
+     public GlobalSearchBar(JabRefFrame frame, StateManager stateManager, PreferencesService preferencesService, CountingUndoManager undoManager, DialogService dialogService) {
+         super();
+@@ -145,6 +149,7 @@ public class GlobalSearchBar extends HBox {
+         fulltextButton = IconTheme.JabRefIcons.FULLTEXT.asToggleButton();
+         openGlobalSearchButton = IconTheme.JabRefIcons.OPEN_GLOBAL_SEARCH.asButton();
+         keepSearchString = IconTheme.JabRefIcons.KEEP_SEARCH_STRING.asToggleButton();
++        openSearchHistoryButton = IconTheme.JabRefIcons.SEARCH_HISTORY.asButton();
+ 
+         initSearchModifierButtons();
+ 
+@@ -180,7 +185,7 @@ public class GlobalSearchBar extends HBox {
+         visualizer.setDecoration(new IconValidationDecorator(Pos.CENTER_LEFT));
+         Platform.runLater(() -> visualizer.initVisualization(regexValidator.getValidationStatus(), searchField));
+ 
+-        this.getChildren().addAll(searchField, openGlobalSearchButton, currentResults);
++        this.getChildren().addAll(searchField, openGlobalSearchButton, openSearchHistoryButton, currentResults);
+         this.setSpacing(4.0);
+         this.setAlignment(Pos.CENTER_LEFT);
+ 
+@@ -246,6 +251,16 @@ public class GlobalSearchBar extends HBox {
+             dialogService.showCustomDialogAndWait(globalSearchResultDialog);
+             globalSearchActive.setValue(false);
+         });
++
++        openSearchHistoryButton.disableProperty().bindBidirectional(searchHistoryActive);
++        openSearchHistoryButton.setTooltip(new Tooltip(Localization.lang("See, modify and reuse your search history")));
++        initSearchModifierButton(openSearchHistoryButton);
++        openSearchHistoryButton.setOnAction(evt -> {
++            searchHistoryActive.setValue(true);
++            historyDialogView = new HistoryDialogView(stateManager, searchField);
++            dialogService.showCustomDialogAndWait(historyDialogView);
++            searchHistoryActive.setValue(false);
++        });
+     }
+ 
+     private void initSearchModifierButton(ButtonBase searchButton) {
+@@ -292,13 +307,16 @@ public class GlobalSearchBar extends HBox {
+             informUserAboutInvalidSearchQuery();
+             return;
+         }
++
++        stateManager.getSearchHistory().addSearch(searchQuery.getQuery());
+         stateManager.setSearchQuery(searchQuery);
+     }
+ 
+     private boolean validRegex() {
+         try {
+             Pattern.compile(searchField.getText());
+-        } catch (PatternSyntaxException e) {
++        } catch (
++                PatternSyntaxException e) {
+             LOGGER.debug(e.getMessage());
+             return false;
+         }
+@@ -335,7 +353,9 @@ public class GlobalSearchBar extends HBox {
+             Field privatePopup = AutoCompletionBinding.class.getDeclaredField("autoCompletionPopup");
+             privatePopup.setAccessible(true);
+             return (AutoCompletePopup<T>) privatePopup.get(autoCompletionBinding);
+-        } catch (IllegalAccessException | NoSuchFieldException e) {
++        } catch (
++                IllegalAccessException |
++                NoSuchFieldException e) {
+             LOGGER.error("Could not get access to auto completion popup", e);
+             return new AutoCompletePopup<>();
+         }
+diff --git a/src/main/java/org/jabref/gui/search/HistoryDialog.css b/src/main/java/org/jabref/gui/search/HistoryDialog.css
+new file mode 100644
+index 000000000..bb4be20c4
+--- /dev/null
++++ b/src/main/java/org/jabref/gui/search/HistoryDialog.css
+@@ -0,0 +1,3 @@
++.info-sections {
++    -fx-padding: 5px;
++}
+diff --git a/src/main/java/org/jabref/gui/search/HistoryDialog.fxml b/src/main/java/org/jabref/gui/search/HistoryDialog.fxml
+new file mode 100644
+index 000000000..a38d85c1d
+--- /dev/null
++++ b/src/main/java/org/jabref/gui/search/HistoryDialog.fxml
+@@ -0,0 +1,46 @@
++<?xml version="1.0" encoding="UTF-8"?>
++
++<?import javafx.scene.control.*?>
++<?import javafx.scene.layout.*?>
++<DialogPane prefWidth="530.0" prefHeight="510.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jabref.gui.search.HistoryDialogView">
++    <content>
++        <VBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
++            <TableView
++                    fx:id="searchHistoryTable"
++                    HBox.hgrow="ALWAYS"
++                    editable="true">
++                <columns>
++                    <TableColumn
++                            fx:id="searchHistoryStringColumn"
++                            text="%Search String"
++                            reorderable="false"
++                    />
++                    <TableColumn
++                            fx:id="searchHistoryDateColumn"
++                            text="Date"
++                            maxWidth="150.0"
++                            prefWidth="150.0"
++                            minWidth="150.0"
++                            resizable="false"
++                            reorderable="false"
++                    />
++                    <TableColumn
++                            fx:id="searchHistoryRemoveColumn"
++                            text=""
++                            maxWidth="30.0"
++                            prefWidth="30.0"
++                            minWidth="30.0"
++                            reorderable="false"
++                            resizable="false"/>
++                </columns>
++                <columnResizePolicy>
++                    <TableView
++                            fx:constant="CONSTRAINED_RESIZE_POLICY"/>
++                </columnResizePolicy>
++            </TableView>
++        </VBox>
++    </content>
++    <header>
++    </header>
++    <ButtonType fx:constant="CLOSE"/>
++</DialogPane>
+diff --git a/src/main/java/org/jabref/gui/search/HistoryDialogView.java b/src/main/java/org/jabref/gui/search/HistoryDialogView.java
+new file mode 100644
+index 000000000..7c9ecd315
+--- /dev/null
++++ b/src/main/java/org/jabref/gui/search/HistoryDialogView.java
+@@ -0,0 +1,80 @@
++package org.jabref.gui.search;
++
++import javafx.beans.property.SimpleStringProperty;
++import javafx.fxml.FXML;
++import javafx.scene.control.TableColumn;
++import javafx.scene.control.TableRow;
++import javafx.scene.control.TableView;
++import javafx.scene.control.cell.TextFieldTableCell;
++import javafx.scene.input.MouseButton;
++
++import org.jabref.gui.StateManager;
++import org.jabref.gui.icon.IconTheme;
++import org.jabref.gui.util.BaseDialog;
++import org.jabref.gui.util.ValueTableCellFactory;
++import org.jabref.logic.l10n.Localization;
++
++import com.airhacks.afterburner.views.ViewLoader;
++import org.controlsfx.control.textfield.CustomTextField;
++
++public class HistoryDialogView extends BaseDialog<Void> {
++    @FXML private TableView<SearchHistoryItem> searchHistoryTable;
++    @FXML private TableColumn<SearchHistoryItem, String> searchHistoryStringColumn;
++    @FXML private TableColumn<SearchHistoryItem, String> searchHistoryDateColumn;
++    @FXML private TableColumn<SearchHistoryItem, String> searchHistoryRemoveColumn;
++    private final StateManager stateManager;
++    private HistoryDialogViewModel viewModel;
++    private final CustomTextField searchField;
++
++    public HistoryDialogView(StateManager stateManager, CustomTextField searchField) {
++        this.setTitle(Localization.lang("Search History"));
++        this.stateManager = stateManager;
++        this.searchField = searchField;
++
++        ViewLoader.view(this)
++                  .load()
++                  .setAsDialogPane(this);
++    }
++
++    public HistoryDialogViewModel getViewModel() {
++        return viewModel;
++    }
++
++    @FXML
++    private void initialize() {
++        viewModel = new HistoryDialogViewModel(stateManager);
++
++        searchHistoryTable.setRowFactory(tableView -> {
++            TableRow<SearchHistoryItem> row = new TableRow<>();
++            row.setOnMouseClicked(evt -> {
++                if (!row.isEmpty() && evt.getButton() == MouseButton.PRIMARY && evt.getClickCount() == 2) {
++                    String searchStringClicked = row.getItem().searchStringProperty().get();
++                    searchField.setText(searchStringClicked);
++                    this.close();
++                }
++            });
++            return row;
++        });
++
++        searchHistoryStringColumn.setEditable(false);
++        searchHistoryStringColumn.setCellFactory(TextFieldTableCell.forTableColumn());
++        searchHistoryStringColumn.setCellValueFactory(param -> param.getValue().searchStringProperty());
++
++        searchHistoryDateColumn.setEditable(false);
++        searchHistoryDateColumn.setCellFactory(TextFieldTableCell.forTableColumn());
++        searchHistoryDateColumn.setCellValueFactory(param -> param.getValue().lastSearchedProperty());
++
++        searchHistoryRemoveColumn.setEditable(false);
++        searchHistoryRemoveColumn.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().searchStringProperty().get()));
++
++        new ValueTableCellFactory<SearchHistoryItem, String>()
++                .withGraphic(item -> IconTheme.JabRefIcons.DELETE_ENTRY.getGraphicNode())
++                .withTooltip(name -> Localization.lang("Remove"))
++                .withOnMouseClickedEvent(item -> evt -> viewModel.remove(item))
++                .install(searchHistoryRemoveColumn);
++
++        searchHistoryTable.setItems(viewModel.getHistory());
++
++        this.setResizable(false);
++    }
++}
+diff --git a/src/main/java/org/jabref/gui/search/HistoryDialogViewModel.java b/src/main/java/org/jabref/gui/search/HistoryDialogViewModel.java
+new file mode 100644
+index 000000000..707176bbe
+--- /dev/null
++++ b/src/main/java/org/jabref/gui/search/HistoryDialogViewModel.java
+@@ -0,0 +1,22 @@
++package org.jabref.gui.search;
++
++import javafx.collections.ObservableList;
++
++import org.jabref.gui.AbstractViewModel;
++import org.jabref.gui.StateManager;
++
++public class HistoryDialogViewModel extends AbstractViewModel {
++    private final StateManager stateManager;
++
++    public HistoryDialogViewModel(StateManager stateManager) {
++        this.stateManager = stateManager;
++    }
++
++    public ObservableList<SearchHistoryItem> getHistory() {
++        return this.stateManager.getSearchHistory().getHistory();
++    }
++
++    public void remove(String searchTerm) {
++        this.stateManager.getSearchHistory().remove(searchTerm);
++    }
++}
+diff --git a/src/main/java/org/jabref/gui/search/SearchHistoryItem.java b/src/main/java/org/jabref/gui/search/SearchHistoryItem.java
+new file mode 100644
+index 000000000..fb4f859d8
+--- /dev/null
++++ b/src/main/java/org/jabref/gui/search/SearchHistoryItem.java
+@@ -0,0 +1,26 @@
++package org.jabref.gui.search;
++
++import java.text.SimpleDateFormat;
++import java.util.Date;
++
++import javafx.beans.property.SimpleStringProperty;
++import javafx.beans.property.StringProperty;
++
++public class SearchHistoryItem {
++    private StringProperty searchString;
++    private StringProperty lastSearched;
++
++    public SearchHistoryItem(String searchString) {
++        this.searchString = new SimpleStringProperty(searchString);
++        String time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
++        this.lastSearched = new SimpleStringProperty(time);
++    }
++
++    public StringProperty searchStringProperty() {
++        return this.searchString;
++    }
++
++    public StringProperty lastSearchedProperty() {
++        return this.lastSearched;
++    }
++}
+diff --git a/src/main/java/org/jabref/logic/search/SearchHistory.java b/src/main/java/org/jabref/logic/search/SearchHistory.java
+new file mode 100644
+index 000000000..8eb462a46
+--- /dev/null
++++ b/src/main/java/org/jabref/logic/search/SearchHistory.java
+@@ -0,0 +1,60 @@
++package org.jabref.logic.search;
++
++import javafx.collections.FXCollections;
++import javafx.collections.ObservableList;
++
++import org.jabref.gui.search.SearchHistoryItem;
++
++public class SearchHistory {
++    private ObservableList<SearchHistoryItem> history = FXCollections.observableArrayList();
++    private final int historyMaxSize = 10;
++
++    public SearchHistory() {
++    }
++
++    public ObservableList<SearchHistoryItem> getHistory() {
++        return this.history;
++    }
++
++    public void remove(String toRemove) {
++        int index = -1;
++        for (int i = 0; i < history.size(); i++) {
++            if (history.get(i).searchStringProperty().get().equals(toRemove)) {
++                index = i;
++                break;
++            }
++        }
++
++        if (index != -1) {
++            // Remove the item
++            history.remove(index);
++        }
++    }
++
++    public void addSearch(String toAdd) {
++        toAdd = toAdd.trim();
++
++        int index = -1;
++        for (int i = 0; i < history.size(); i++) {
++            if (history.get(i).searchStringProperty().get().equals(toAdd)) {
++                index = i;
++                break;
++            }
++        }
++
++        if (index != -1) {
++            // Remove the item
++            history.remove(index);
++        }
++
++        // Create an updated item
++        SearchHistoryItem newItem = new SearchHistoryItem(toAdd);
++
++        // Add it to the end
++        history.add(newItem);
++
++        if (history.size() > historyMaxSize) {
++            history.remove(0);
++        }
++    }
++}
+diff --git a/src/main/resources/l10n/JabRef_en.properties b/src/main/resources/l10n/JabRef_en.properties
+index 29d1e8ebf..40078c423 100644
+--- a/src/main/resources/l10n/JabRef_en.properties
++++ b/src/main/resources/l10n/JabRef_en.properties
+@@ -1,5 +1,7 @@
+ Could\ not\ delete\ empty\ entries.=Could not delete empty entries.
+ 
++Search\ String=Search String
++
+ Delete\ empty\ entries=Delete empty entries
+ 
+ Empty\ entries=Empty entries
+@@ -2530,3 +2532,8 @@ Multiline=Multiline
+ 
+ Main\ directory\ not\ found=Main directory not found
+ Please\ select\ a\ valid\ main\ directory\ under=Please select a valid main directory under
++
++Copied\ search\ histories\ to\ clipboard=Copied search histories to clipboard
++Copy\ Search\ History=Copy Search History
++Search\ History=Search History
++See,\ modify\ and\ reuse\ your\ search\ history=See, modify and reuse your search history
+diff --git a/src/test/java/org/jabref/logic/search/SearchHistoryTest.java b/src/test/java/org/jabref/logic/search/SearchHistoryTest.java
+new file mode 100644
+index 000000000..e1a1033ff
+--- /dev/null
++++ b/src/test/java/org/jabref/logic/search/SearchHistoryTest.java
+@@ -0,0 +1,52 @@
++package org.jabref.logic.search;
++
++import org.junit.jupiter.api.Test;
++
++import static org.junit.jupiter.api.Assertions.assertEquals;
++import static org.junit.jupiter.api.Assertions.assertNotEquals;
++
++public class SearchHistoryTest {
++
++    @Test
++    public void testItemsAdded() {
++       SearchHistory searchHistory = new SearchHistory();
++       searchHistory.addSearch("abc");
++       assertEquals("abc", searchHistory.getHistory().get(0).searchStringProperty().get());
++    }
++
++    @Test
++    public void testItemsRemoved() {
++        SearchHistory searchHistory = new SearchHistory();
++        searchHistory.addSearch("abc");
++        searchHistory.remove("abc");
++        assertEquals(0, searchHistory.getHistory().size());
++    }
++
++    @Test
++    public void testTimeUpdated() throws InterruptedException {
++        SearchHistory searchHistory = new SearchHistory();
++        searchHistory.addSearch("abc");
++        String firstDate = searchHistory.getHistory().get(0).lastSearchedProperty().get();
++        Thread.sleep(2000);
++        searchHistory.addSearch("abc");
++        String secondDate = searchHistory.getHistory().get(0).lastSearchedProperty().get();
++        assertNotEquals(firstDate, secondDate);
++    }
++
++    @Test
++    public void testMaxSizeHistory() {
++        SearchHistory searchHistory = new SearchHistory();
++        searchHistory.addSearch("a");
++        searchHistory.addSearch("b");
++        searchHistory.addSearch("c");
++        searchHistory.addSearch("d");
++        searchHistory.addSearch("e");
++        searchHistory.addSearch("f");
++        searchHistory.addSearch("g");
++        searchHistory.addSearch("h");
++        searchHistory.addSearch("i");
++        searchHistory.addSearch("j");
++        searchHistory.addSearch("asd");
++        assertEquals(10, searchHistory.getHistory().size());
++    }
++}
