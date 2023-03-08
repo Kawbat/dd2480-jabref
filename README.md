@@ -65,6 +65,7 @@ Removing a query is checked by `testItemsRemoved`.
 ## Code changes
 
 ### Patch
+
 #### How to get the patch file
 
 Simply use **`git log -1`** to display the most recent commit.
@@ -73,7 +74,7 @@ To find the **`first_commit_id`**, you can either use **`git log`** to view the 
 
 Then run
 
-```
+```bash
 git diff first_commit_id last_commit_id > diff
 ```
 
@@ -84,23 +85,24 @@ Notice that we replace the original README.md with our report, and the patch wil
 #### Patch Summary
 
 Files modified:
-- StateManager.java
-- IconTheme.java
-- GlobalSearchBar.java
-- JabRef_en.properties
+
+* StateManager.java
+* IconTheme.java
+* GlobalSearchBar.java
+* JabRef_en.properties
 
 New files:
-- HistoryDialog.css
-- HistoryDialog.fxml
-- HistoryDialogView.java
-- HistoryDialogViewModel.java
-- SearchHistoryItem.java
-- SearchHistory.java
-- GlobalSearchBarTest.java
-- SearchHistoryTest.java
+
+* HistoryDialog.css
+* HistoryDialog.fxml
+* HistoryDialogView.java
+* HistoryDialogViewModel.java
+* SearchHistoryItem.java
+* SearchHistory.java
+* GlobalSearchBarTest.java
+* SearchHistoryTest.java
 
 For more details, we uploaded the patch file `diff` to the repository.
-
 
 Optional (point 4): the patch is clean.
 
