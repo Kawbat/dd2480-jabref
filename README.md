@@ -121,9 +121,31 @@ Optional (point 2): relation to design pattern(s).
 
 ## Overall experience
 
-What are your main take-aways from this project? What did you learn?
+During this project, we experimented the difficulty to enter and participate in a large and complex project, on an issue which concerned multiple parts of the code. 
+Indeed, our project entails both the logic part and the application part of the search tool, and most of us did not have a lot of experience with GUI in particular.
 
-How did you grow as a team, using the Essence standard to evaluate yourself?
+In the end, we managed to: 
+- establish the requirements for our feature
+- add a structure to keep track of the search history 
+- add a button and a window to display the search history
+- add tests for our feature corresponding to the established requirements
+- keep the repository clean and respect the required style of the main repo
+- document our work to keep track of how far we were along the way
+
+During this project, we had some trouble being as efficient as a team as we were on the previous project, but this taught us a lot about how to handle drops in motivation or miscommunication.
+According to the ESSENCE framework, we think that we have reached state Collaborating.
+It took us some time to reach the Seeded state by rethinking our team dynamic at the beginning of this project, because we didn't know right away which competences were needed and how each member wanted to spend their time on the project, especially because the time constraints were not the same as with the previous projects. However, we kept the same governance rules as before.
+However, we then managed to reach the Formed and Collaborating state by dividing the tasks and starting to take our individual responsibilities and communicate more openly at the end of the first week.
+We feel that an item is still missing for us to reach the Performing state, because we have had a few inefficiencies during our work (hard time dividing the work, part of the work being carried out twice, etc) and we are still not active in identifying the potential for wasted work, so we should work on this as a group rather than just individually.
+
+We did not exchange much with the community of this project, but we thought that overall the project was very well described and easy to set up, although it took us a lot of time to really understand the structure of the project.
+We would have like to contribute to the project but someone else worked on our issue at the same time, so we couldn't create our own PR on top of theirs. This was disappointing for us, but we are still happy with the work we carried out. 
+
+The main take-aways we gained from this project are:
+- we improved our ability to get our bearings in a very large and complex projects, by using the documentation, sharing our knowledge between different members of the team, and learning to locate the parts of the code that we were interested in and ignore the rest even if we don't understand everything
+- we gained experience in writing GUI application and learned a lot about testing it, even though testing the GUI ended up being too complicated on this particular project
+- we learned a lot about each other as a team, and how to handle difficulties in communication or division of the work
+
 
 Optional (point 6): How would you put your work in context with best software engineering practice?
 
