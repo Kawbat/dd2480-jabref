@@ -31,7 +31,7 @@ public class SearchHistory {
 
         if (index != -1) {
             // Remove the item
-            SearchHistoryItem old = history.remove(index);
+            history.remove(index);
         }
     }
 
@@ -48,7 +48,7 @@ public class SearchHistory {
 
         if (index != -1) {
             // Remove the item
-            SearchHistoryItem old = history.remove(index);
+            history.remove(index);
         }
 
         // Create an updated item
@@ -58,7 +58,7 @@ public class SearchHistory {
         history.add(newItem);
 
         if (history.size() > historyMaxSize) {
-            int idx = 0;
+            int idx = -1;
             SimpleDateFormat simpleFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             Date mostAncientDate = new Date();
             try {
@@ -69,9 +69,9 @@ public class SearchHistory {
                         mostAncientDate = itemDate;
                     }
                 }
-            }
-            catch (ParseException e) {
-
+            } catch (
+                    ParseException e) {
+                idx = 0;
             }
 
             history.remove(idx);
