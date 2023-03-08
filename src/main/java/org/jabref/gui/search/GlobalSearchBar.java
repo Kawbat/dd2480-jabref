@@ -64,7 +64,6 @@ import org.jabref.model.search.rules.SearchRules;
 import org.jabref.preferences.PreferencesService;
 import org.jabref.preferences.SearchPreferences;
 
-import com.airhacks.afterburner.injection.Injector;
 import de.saxsys.mvvmfx.utils.validation.FunctionBasedValidator;
 import de.saxsys.mvvmfx.utils.validation.ValidationMessage;
 import de.saxsys.mvvmfx.utils.validation.Validator;

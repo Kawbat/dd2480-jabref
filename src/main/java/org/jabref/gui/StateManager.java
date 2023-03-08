@@ -79,7 +79,7 @@ public class StateManager {
     }
 
     public SearchHistory getSearchHistory() {
-        if(this.searchHistory.isNull().get()) {
+        if (this.searchHistory.isNull().get()) {
             this.searchHistory.set(new SearchHistory());
         }
         return this.searchHistory.get();

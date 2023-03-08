@@ -36,23 +36,23 @@ For setting up tools and libraries (step 4), enumerate all dependencies
 you took care of and where you spent your time, if that time exceeds
 30 minutes.
 
-#### Marcus
+### Marcus
 
 [TODO]
 
-#### Oscar
+### Oscar
 
 [TODO]
 
-#### Pauline
+### Pauline
 
 [TODO]
 
-#### Simon
+### Simon
 
 [TODO]
 
-#### Siyang
+### Siyang
 
 [TODO]
 
@@ -66,13 +66,7 @@ Implement recording of search history so that the user can view previous search 
 
 The search history management should be implemented in a separate class called `SearchHistory` where the list itself is handled by a `LinkedHashSet` data structure. This automatically avoids duplicate entries and also keeps the order that entries are saved in. When the user performs a search this query should also be forwarded from `GlobalSearchBar` to the `SearchHistory` class which validates it and then stores it in the data structure. Further `GlobalSearchBar` also needs to be modified in order to append the history button to the side of the search bar.
 
-## Requirements
-
-### Issue #7906: Record search history
-
-<https://github.com/JabRef/jabref/issues/7906>
-
-Requirements:
+### Requirements
 
 * `R01`: Save queries  
 The queries performed by the user should be saved in a search history. Empty queries should not be saved in the search history and equal queries should only occur once in the search history. The search history should be limited to the 10 most recent queries.
