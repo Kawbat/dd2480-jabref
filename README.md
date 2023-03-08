@@ -14,47 +14,18 @@ We chose a new project since the previous project was a collection of algorithms
 
 ## Effort spent
 
-For each team member, how much time was spent in
+The amount of time in hours on different tasks for each group member is listed below:
 
-1. plenary discussions/meetings;
+|                          | Marcus  | Oscar   | Pauline | Simon   | Siyang  |
+| :---                     | :---:   | :---:   | :---:   | :---:   | :---:   |
+| Discussions and meetings |         |         |         | 9       |         |
+| Configuration and setup  |         |         |         | 2       |         |
+| Reading documentation    |         |         |         | 2       |         |
+| Writing documentation    |         |         |         | 8       |         |
+| Programming together     |         |         |         | 4       |         |
+| Programming individually |         |         |         | 0       |         |
 
-2. discussions within parts of the group;
-
-3. reading documentation;
-
-4. configuration and setup;
-
-5. analyzing code/output;
-
-6. writing documentation;
-
-7. writing code;
-
-8. running code?
-
-For setting up tools and libraries (step 4), enumerate all dependencies
-you took care of and where you spent your time, if that time exceeds
-30 minutes.
-
-#### Marcus
-
-[TODO]
-
-#### Oscar
-
-[TODO]
-
-#### Pauline
-
-[TODO]
-
-#### Simon
-
-[TODO]
-
-#### Siyang
-
-[TODO]
+The configuration and setup was quite simple where most of the time was spent on installing JDK 19, IntelliJ IDEA and Gradle.
 
 ## Overview
 
