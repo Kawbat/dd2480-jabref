@@ -102,8 +102,16 @@ Optional (point 5): considered for acceptance (passes all automated checks).
 
 ## Test results
 
-Overall results with link to a copy or excerpt of the logs (before/after
-refactoring).
+After implementing our new feature we wrote tests to make all the functions work and behave properly. Ultimately we decided to write tests for the GUI implementation and found a testing framework called TestFX. Although it was a lot harder than we initially thought. After spending a rather large amount of time on trying to figure out TestFX we had to scrap the idea due to the fact that JabRef didn’t seem to integrate well with TestFX. Although we did manual tests of the GUI to make sure all the functionality of the GUI worked as intended.  Instead we decided to just make tests for the logical aspects of our implementation. We created a test class called `SearchHistoryTest` for the tests.
+
+The tests created can be seen on the following link: <https://github.com/Kawbat/dd2480-jabref/blob/main/src/test/java/org/jabref/logic/search/SearchHistoryTest.java>
+
+For our test log we decided to use the Automated Github Actions as reference.
+
+To run the test log you can navigate to the following link: <https://github.com/Kawbat/dd2480-jabref/actions/runs/4364677845/jobs/7632289433>
+
+Then simply click run “Run Tests” to get the test log.
+
 
 ## UML class diagram and its description
 
