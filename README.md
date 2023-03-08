@@ -37,7 +37,7 @@ Implement recording of search history so that the user can view previous search 
 
 The search history management should be implemented in a separate class called `SearchHistory` where the list itself is handled by a `LinkedHashSet` data structure. This automatically avoids duplicate entries and also keeps the order that entries are saved in. When the user performs a search this query should also be forwarded from `GlobalSearchBar` to the `SearchHistory` class which validates it and then stores it in the data structure. Further `GlobalSearchBar` also needs to be modified in order to append the history button to the side of the search bar.
 
-Requirements:
+#### Requirements
 
 * `R01`: Save queries  
 The queries performed by the user should be saved in a search history. Empty queries should not be saved in the search history and equal queries should only occur once in the search history. The search history should be limited to the 10 most recent queries.
@@ -48,7 +48,7 @@ The user should be able to click on a specific entry from the search history win
 * `R04`: Remove queries  
 The user should be able to remove entries from the search history window, either by clicking on the remove button next to each corresponding entry, or by clicking on the clear button for the entire search history list.
 
-#### Tests:
+#### Tests
 
 We implemented tests directly for the logical structure containing the SearchHistory, and the application part of the requirements was tested manually because we did not manage to find a suitable testing technique for the GUI on this project.
 All test can be found in [SearchHistoryTest.java](https://github.com/Kawbat/dd2480-jabref/blob/d16e1e551c4ba6e62b0cc50b0f4261148596078a/src/test/java/org/jabref/logic/search/SearchHistoryTest.java)
