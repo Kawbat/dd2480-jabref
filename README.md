@@ -77,16 +77,19 @@ The user should be able to click on a specific entry from the search history win
 * `R04`: Remove queries  
 The user should be able to remove entries from the search history window, either by clicking on the remove button next to each corresponding entry, or by clicking on the clear button for the entire search history list.
 
-Tests:
+#### Tests:
+
+We implemented tests directly for the logical structure containing the SearchHistory, and the application part of the requirements was tested manually because we did not manage to find a suitable testing technique for the GUI on this project.
+All test can be found in [SearchHistoryTest.java](https://github.com/Kawbat/dd2480-jabref/blob/d16e1e551c4ba6e62b0cc50b0f4261148596078a/src/test/java/org/jabref/logic/search/SearchHistoryTest.java)
 
 * `R01`: Save queries  
-[TODO]
+Adding queries is checked by `testItemsAdded` and limited size of the history is checked by `testMaxSizeHistory`.
 * `R02`: View queries  
-[TODO]
+This requirement was tested manually.
 * `R03`: Utilize queries  
-[TODO]
+This requirement was tested manually, and `testTimeUpdated` tests that when a search is performed a second time, its date is updated.
 * `R04`: Remove queries  
-[TODO]
+Removing a query is checked by `testItemsRemoved`.
 
 ## Code changes
 
