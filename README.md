@@ -18,12 +18,12 @@ The amount of time in hours on different tasks for each group member is listed b
 
 |                          | Marcus  | Oscar   | Pauline | Simon   | Siyang  |
 | :---                     | :---:   | :---:   | :---:   | :---:   | :---:   |
-| Discussions and meetings |         |         |         | 9       |         |
-| Configuration and setup  |         |         |         | 2       |         |
-| Reading documentation    |         |         |         | 2       |         |
-| Writing documentation    |         |         |         | 8       |         |
-| Programming together     |         |         |         | 4       |         |
-| Programming individually |         |         |         | 0       |         |
+| Discussions and meetings | 9       | 9       | 9       | 9       | 8       |
+| Configuration and setup  | 1       | 2       | 1       | 2       | 2       |
+| Reading documentation    | 1       | 2       | 3       | 2       | 2       |
+| Writing documentation    | 2       | 2       | 3       | 8       | 5       |
+| Programming together     | 5       | 5       | 5       | 4       | 4       |
+| Programming individually | 7       | 3       | 3       | 0       | 4       |
 
 The configuration and setup was quite simple where most of the time was spent on installing JDK 19, IntelliJ IDEA and Gradle.
 
