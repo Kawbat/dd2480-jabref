@@ -102,6 +102,11 @@ New files:
 
 For more details, we uploaded the patch file `diff` to the repository.
 
+#### Patch submitted in PR
+
+We submitted our work in a PR to the main repo, although someone has been working on the same issue at the same time as us.
+The PR can be found [here](https://github.com/JabRef/jabref/pull/9659).
+
 ## Test results
 
 After implementing our new feature we wrote tests to make all the functions work and behave properly. Ultimately we decided to write tests for the GUI implementation and found a testing framework called TestFX. Although it was a lot harder than we initially thought. After spending a rather large amount of time on trying to figure out TestFX we had to scrap the idea due to the fact that JabRef didn’t seem to integrate well with TestFX. Although we did manual tests of the GUI to make sure all the functionality of the GUI worked as intended.  Instead we decided to just make tests for the logical aspects of our implementation. We created a test class called `SearchHistoryTest` for the tests.
@@ -117,6 +122,7 @@ Then simply click run "Run Tests" to get the test log.
 ## UML class diagram and its description
 
 The UML Diagram which shows all the classes and changes we've done is located as a PDF in the root folder and is called UML_Diagram.pdf
+There is a color code in the diagram: green items are new (added by our team) while blue items have been changed by our team but existed previously.
 
 ### Key changes/classes affected
 
