@@ -122,9 +122,7 @@ Then simply click run "Run Tests" to get the test log.
 
 ### Key changes/classes affected
 
-Optional (point 1): Architectural overview.
-
-Optional (point 2): relation to design pattern(s).
+The UML Diagram which shows all the classes and changes we've done is located as a PDF in the root folder and is called UML_Diagram.pdf
 
 ## Overall experience
 
