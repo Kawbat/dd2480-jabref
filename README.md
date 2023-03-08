@@ -91,10 +91,42 @@ Tests:
 ## Code changes
 
 ### Patch
+#### How to get the patch file
 
-(copy your changes or the add git command to show them)
+Simply use **`git log -1`** to display the most recent commit.
 
-git diff ...
+To find the **`first_commit_id`**, you can either use **`git log`** to view the entire commit history and find the first commit, or use **`git log --reverse`** to reverse the order of the commit history and show the oldest commit first.
+
+Then run
+
+```
+git diff first_commit_id last_commit_id > diff
+```
+
+to generate the difference file.
+
+Notice that we replace the original README.md with our report, and the patch will include this modification.
+
+#### Patch Summary
+
+Files modified:
+- StateManager.java
+- IconTheme.java
+- GlobalSearchBar.java
+- JabRef_en.properties
+
+New files:
+- HistoryDialog.css
+- HistoryDialog.fxml
+- HistoryDialogView.java
+- HistoryDialogViewModel.java
+- SearchHistoryItem.java
+- SearchHistory.java
+- GlobalSearchBarTest.java
+- SearchHistoryTest.java
+
+For more details, we uploaded the patch file `diff` to the repository.
+
 
 Optional (point 4): the patch is clean.
 
