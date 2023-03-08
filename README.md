@@ -154,7 +154,7 @@ The main take-aways we gained from this project are:
 * we learned a lot about each other as a team, and how to handle difficulties in communication or division of the work
 
 ## Analyse our project with the SEMAT kernel (covering alphas other than Team/Way of Working)
- 
+
 * Requirements: The requirements for the software system are clearly defined and documented, and they are complete, accurate, and unambiguous.
 * Software System: The system is well designed and implemented to meet the requirements and provides the desired functionality.
 * Work:  Out team is effectively managing and executing the software development process. Holding regular meetings is a key component of effective project management and helps to ensure that everyone is on the same page and working towards the same goals. By doing so, our team is able to identify and prioritize the necessary tasks and activities and ensure that they are being performed efficiently and effectively.
