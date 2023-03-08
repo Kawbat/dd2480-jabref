@@ -116,6 +116,8 @@ Then simply click run "Run Tests" to get the test log.
 
 ## UML class diagram and its description
 
+The UML Diagram which shows all the classes and changes we've done is located as a PDF in the root folder and is called UML_Diagram.pdf
+
 ### Key changes/classes affected
 
 While implementing the new features, we tried to stick to the existing software architecture, as closely as possible. This was partly due to us wanting to keep a consistent structure throughout the application, as it improves readability and makes it easier for others to review, understand and expand upon our additions to the source code. The other reason for this was simply that by closely studying the already existing features of the project, we were able to learn how to implement the new features. Then it followed naturally that our code stayed close to the original project structure. We were also introduced to a new design pattern, with which we were not that familiar. This pattern was the observer pattern. While we were not deeply exposed to the underlying implementation of the observers, we understood that JavaFX used observers in order to determine when data relevant to tables was updated, and the GUI could be redrawn. By keeping an ObservableList in our SearchHistory class, we could use this list to set the items of a JavaFX TableView. This caused JavaFX to automatically refresh the GUI whenever the ObservableList was modified.
