@@ -6,7 +6,7 @@ on:
       - main
       - main-release
   pull_request:
-  # always run on pull requests
+    # always run on pull requests
   workflow_dispatch:
 
 env:
