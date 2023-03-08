@@ -1,9 +1,5 @@
 package org.jabref.logic.search;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -58,23 +54,7 @@ public class SearchHistory {
         history.add(newItem);
 
         if (history.size() > historyMaxSize) {
-            int idx = -1;
-            SimpleDateFormat simpleFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            Date mostAncientDate = new Date();
-            try {
-                for (int i = 0; i < history.size(); i++) {
-                    Date itemDate = simpleFormat.parse(history.get(i).lastSearchedProperty().get());
-                    if (itemDate.before(mostAncientDate)) {
-                        idx = i;
-                        mostAncientDate = itemDate;
-                    }
-                }
-            } catch (
-                    ParseException e) {
-                idx = 0;
-            }
-
-            history.remove(idx);
+            history.remove(0);
         }
     }
 }
