@@ -1,3 +1,5 @@
+---
+
 version: 2
 updates:
   - package-ecosystem: gradle
@@ -25,3 +27,5 @@ updates:
       interval: weekly
     labels:
       - "type: dependencies"
+
+...
